@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+
+% Prefix binary tree
+\begin{tikzpicture}[level distance=1.5cm,  level 1/.style={sibling distance=5cm},  level 2/.style={sibling distance=2cm}]
+  \node[circle,draw] {-9}
+    child {
+      node[circle,draw] {-5}
+      child {
+        node[circle,draw] {0}
+      }
+      child {
+        node[circle,draw] {1}
+      }
+    }
+    child {
+      node[circle,draw] {5}
+      child {
+        node[circle,draw] {7}
+      }
+      child {
+        node[circle,draw] {8}
+        child {
+          node[circle,draw] {10}
+          child {
+            node[circle,draw] {11}
+          }
+        }
+      }
+    };
+\end{tikzpicture}
+
+% Postfix binary tree
+\begin{tikzpicture}[level distance=1.5cm,  level 1/.style={sibling distance=5cm},  level 2/.style={sibling distance=2cm}]
+  \node[circle,draw] {11}
+    child {
+      node[circle,draw] {10}
+      child {
+        node[circle,draw] {8}
+        child {
+          node[circle,draw] {5}
+          child {
+            node[circle,draw] {-9}
+          }
+        }
+        child {
+          node[circle,draw] {7}
+        }
+      }
+      child {
+        node[circle,draw] {1}
+      }
+    }
+    child {
+      node[circle,draw] {0}
+      child {
+        node[circle,draw] {-5}
+      }
+      child {
+        node[circle,draw] {5}
+      }
+    };
+\end{tikzpicture}
+
+\end{document}
